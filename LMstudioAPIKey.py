@@ -1,15 +1,17 @@
-import openai
+from openai import OpenAI
 
-openai.api_base = "http://localhost:1234/v1"
-openai.api_key = "lmstudio"
-
-response = openai.ChatCompletion.create(
-    model="llama3",
-    messages=[
-        {"role": "system", "content": "あなたは親切な日本語アシスタントです。"},
-        {"role": "user", "content": "今日の天気は？"}
-    ],
-    temperature=0.7,
+client = OpenAI(
+    base_url="http://localhost:1234/v1",
+    api_key="lmstudio"
 )
 
-print(response["choices"][0]["message"]["content"])
+response = client.chat.completions.create(
+    model="llama3",
+    messages=[
+        {"role": "system", "content": "あなたは親切なアシスタントです。"},
+        {"role": "user", "content": "日本のことわざをひとつ教えて。"}
+    ],
+    temperature=0.7
+)
+
+print(response.choices[0].message.content)
