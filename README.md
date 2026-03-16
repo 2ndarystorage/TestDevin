@@ -58,3 +58,15 @@
 
 ## Completion Status
 - Prototype: minimal example script with hardcoded settings and no error handling or configuration.
+
+## Program Summary
+- Single Python script that calls a local OpenAI-compatible server (LM Studio-style endpoint) via the OpenAI client to request a Japanese proverb and print the reply.
+- Hardcoded base URL, model (`llama3`), system/user messages, and temperature; no configuration or CLI.
+
+## How to Use
+- Install dependency: `pip install openai` (Not verified).
+- Run: `python LMstudioAPIKey.py` (Not verified).
+- Ensure a local OpenAI-compatible server is running at `http://localhost:1234/v1` with a model named `llama3` (Not verified).
+
+## Completion Status
+- Prototype: single hardcoded example without configuration, validation, or error handling.
