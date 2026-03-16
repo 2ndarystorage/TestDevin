@@ -46,3 +46,15 @@
 
 ## Completion Status
 - Prototype: single hardcoded example without validation, error handling, or configuration.
+
+## Program Summary
+- Single Python script that sends a chat completion request to a local OpenAI-compatible server (LM Studio default URL) and prints the response.
+- Uses hardcoded model (`llama3`) and Japanese prompt/messages; no configuration or CLI.
+
+## How to Use
+- Install dependency: `pip install openai` (Not verified).
+- Run: `python LMstudioAPIKey.py` (Not verified).
+- Ensure a local OpenAI-compatible server is running at `http://localhost:1234/v1` with a model named `llama3` (Not verified).
+
+## Completion Status
+- Prototype: minimal example script with hardcoded settings and no error handling or configuration.
